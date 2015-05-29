@@ -11,9 +11,17 @@ with open ('/Users/lancerogers/homework/word_frequency/word-frequency/sample.txt
 
     def sample(file_str):
         h_dict = {}
+        #print(file_str)
         for line in file_str.split():
-            for words in line:
+            #print(line)
+            for words in line.split():
+
                 words = re.sub(r'[^A-Za-z\s]',"", words.lower())
+                try:
+                    words != ''
+                except:
+                    pass
+                #print(words)
                 # words = re.sub('[" "]', '', words.lower())
             if words in h_dict:
                 h_dict[words] = h_dict[words] + 1
