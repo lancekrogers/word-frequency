@@ -8,14 +8,10 @@ import re
 
 with open ('/Users/lancerogers/homework/word_frequency/word-frequency/sample.txt','r') as file:
     file_str = file.read()
-    #print(file_str)
+    # print(file_str)
     def word_frequency(file_str):
         h_dict = {}
-        #print(file_str)
-        #for line in file_str.split():
-            #print(line)
-            #for words in line.split():
-
+        # print(file_str)
         words = re.sub(r'[^A-Za-z\s]',"", file_str).lower().split()
         for string in words:
             if string in h_dict:
