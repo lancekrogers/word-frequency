@@ -4,7 +4,7 @@
 # reverse top 20 words
 # print top 20 words
 # store results in an outside file
-from collections import Counter
+
 import re
 
 with open ('/Users/lancerogers/homework/word_frequency/word-frequency/sample.txt','r') as file:
