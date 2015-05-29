@@ -4,6 +4,7 @@
 # reverse top 20 words
 # print top 20 words
 # store results in an outside file
+from collections import Counter
 import re
 
 with open ('/Users/lancerogers/homework/word_frequency/word-frequency/sample.txt','r') as file:
@@ -21,4 +22,21 @@ with open ('/Users/lancerogers/homework/word_frequency/word-frequency/sample.txt
         return h_dict
 
 h_dict = word_frequency(file_str)
-print(h_dict)
+# print(h_dict)
+
+
+# create a function that takes in a dictionary and returns the top 20
+# occurances in that dictionary
+headache = sorted(h_dict.items(), key = lambda x: x[1], reverse = True)
+top_twenty = headache[:20]
+def strip_list(top_twenty):
+    for value in top_twenty:
+        if value != None:
+            tuple_str = value[0]
+            tuple_int = value[1]
+            print("{} {}".format(tuple_str, tuple_int))
+            continue
+        else:
+            break
+        return
+strip_list(top_twenty)
