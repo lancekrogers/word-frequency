@@ -29,6 +29,7 @@ h_dict = word_frequency(file_str)
 # occurances in that dictionary
 headache = sorted(h_dict.items(), key = lambda x: x[1], reverse = True)
 top_twenty = headache[:20]
+
 def strip_list(top_twenty):
     for value in top_twenty:
         if value != None:
